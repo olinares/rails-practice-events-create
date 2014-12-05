@@ -1,1 +1,46 @@
+<h1>Events</h1>
+<div class="form-group">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>
+          Date:
+        </th>
+        <th>
+          Description:
+        </th>
+        <th>
+          Require ID:
+        </th>
+        <th>
+          Capacity:
+        </th>
+        <th>
+          Directions:
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @event.each do |event| %>
+      <tr>
+        <td>
+          <%= event[:date] %>
+        </td>
+        <td>
+          <%= event[:description] %>
+        </td>
+        <td>
+          <%= event[:require_id] %>
+        </td>
+        <td>
+          <%= event[:capacity] %>
+        </td>
+        <td>
+          <%= event[:directions] %>
+        </td>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
 <%= link_to 'New Events', new_event_path %>
